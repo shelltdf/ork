@@ -98,7 +98,7 @@ struct box2
      * Creates a new bounding box enclosing the two given points.
      */
     box2(const vec2<type> &p, const vec2<type> &q) :
-        xmin(min(p.x, q.x)), xmax(max(p.x, q.x)), ymin(min(p.y, q.y)), ymax(max(p.y, q.y))
+        xmin(std::min(p.x, q.x)), xmax(std::max(p.x, q.x)), ymin(std::min(p.y, q.y)), ymax(std::max(p.y, q.y))
     {
     }
 
@@ -151,7 +151,7 @@ struct box2
      */
     box2 enlarge(const vec2<type> &p) const
     {
-        return box2(min(xmin, p.x), max(xmax, p.x), min(ymin, p.y), max(ymax, p.y));
+        return box2(std::min(xmin, p.x), std::max(xmax, p.x), std::min(ymin, p.y), std::max(ymax, p.y));
     }
 
     /**
@@ -161,7 +161,7 @@ struct box2
      */
     box2 enlarge(const box2 &r) const
     {
-        return box2(min(xmin, r.xmin), max(xmax, r.xmax), min(ymin, r.ymin), max(ymax, r.ymax));
+        return box2(std::min(xmin, r.xmin), std::max(xmax, r.xmax), std::min(ymin, r.ymin), std::max(ymax, r.ymax));
     }
 
     /**

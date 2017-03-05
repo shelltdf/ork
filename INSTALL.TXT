@@ -26,7 +26,7 @@ to build:
 For the Code::Blocks project you need to define the following global compiler
 variables:
 - glut (base) : either glut32 or freeglut 
-- glut (cflags) : either USE_GLUT or USE_FREEGLUT
+- glut (cflags) : either USEGLUT or USEFREEGLUT
 - glew : the path to the glew DLL, e.g. C:\Progra~1\glew\glew32.dll
 You also need to set the "Explicitly add project's top-level directory to 
 compiler search dirs" options in "Global compiler settings/Other settings"
@@ -83,11 +83,11 @@ command lines:
 - ork-examples render examples
 - ork-examples resource examples
 - ork-examples scenegraph examples
-- ork-examples scenegraphresource exampleScene
+- ork-examples scenegraphresource examples exampleScene
 
-- ork-examples scenegraphresource postprocessScene
-- ork-examples scenegraphresource skyboxScene
-- ork-examples scenegraphresource cubesScene
+- ork-examples scenegraphresource examples postprocessScene
+- ork-examples scenegraphresource examples skyboxScene
+- ork-examples scenegraphresource examples cubesScene
 
 - ork-examples tessellation
 
